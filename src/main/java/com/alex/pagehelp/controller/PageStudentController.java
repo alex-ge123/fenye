@@ -47,13 +47,7 @@ public class PageStudentController {
 
         Map<String, Student> map = pageInfos.getMap();
     System.out.println(map);
-//        Iterator<Map.Entry<String, Student>> iterator = map.entrySet().iterator();
-//    while (iterator.hasNext()){
-//     iterator.next();
-//      System.out.println(key);
-//        Student student = map.get(key);
-//      System.out.println(student);
-//    }
+    System.out.println(pageInfos.getBool());
         for (String key  :map.keySet() ) {
       System.out.println(key);
       System.out.println(map.get(key).getAge());

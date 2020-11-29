@@ -1,6 +1,7 @@
 {
    "pageCode":"2",
     "pageSize":"6",
+    "bool":true,
     "list":[
         {
         "id": 8,

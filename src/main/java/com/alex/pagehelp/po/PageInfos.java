@@ -18,6 +18,7 @@ import java.util.Map;
 public class PageInfos implements Serializable
 {
    private Integer pageSize;
+   private Boolean bool;
    private Integer   pageCode;
    private List<Student>  list =new ArrayList<>();
    private  char [] cc;
