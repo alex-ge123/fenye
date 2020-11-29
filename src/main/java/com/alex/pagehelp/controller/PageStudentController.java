@@ -44,14 +44,20 @@ public class PageStudentController {
     public PageInfo<Student> findByPage3(@RequestBody PageInfos pageInfos) {
         System.out.println(pageInfos.getPageCode()+"...."+pageInfos.getPageSize());
         List<Student> list = pageInfos.getList();
-        Map<String, Student> params1 = pageInfos.getMap();
-        Iterator<Map.Entry<String, Student>> iterator = params1.entrySet().iterator();
-    while (iterator.hasNext()){
-        String key = iterator.next().toString();
+
+        Map<String, Student> map = pageInfos.getMap();
+    System.out.println(map);
+//        Iterator<Map.Entry<String, Student>> iterator = map.entrySet().iterator();
+//    while (iterator.hasNext()){
+//     iterator.next();
+//      System.out.println(key);
+//        Student student = map.get(key);
+//      System.out.println(student);
+//    }
+        for (String key  :map.keySet() ) {
       System.out.println(key);
-        Student student = params1.get(key);
-      System.out.println(student);
-    }
+      System.out.println(map.get(key).getAge());
+        }
       for (Student s : list) {
           System.out.println(s);
         }
